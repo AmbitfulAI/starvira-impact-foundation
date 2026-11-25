@@ -5,8 +5,8 @@ order: 1
 pillar: education
 status: Planned
 sdgs: [4]
-image: /images/illustrations/back-to-school.svg
-imageAlt: Illustration of a school bag, an open book and a pencil beneath a rising sun
+image: /images/art/education.svg
+imageAlt: ""
 summary: Helping children who are out of school, or at risk of leaving, return to the classroom with the materials, encouragement and follow-up they need to stay.
 problem: For many families, the cost of uniforms, books, writing materials and school levies arrives all at once. When money is short, children can miss the start of term, fall behind, and quietly drop out. A small, well-timed intervention can keep a child learning.
 beneficiaries:

@@ -5,8 +5,8 @@ order: 7
 pillar: equality
 status: Planned
 sdgs: [4, 5]
-image: /images/illustrations/volunteer-youth.svg
-imageAlt: Illustration of three figures with raised arms beneath a heart and small stars
+image: /images/art/youth.svg
+imageAlt: ""
 summary: Opportunities for young people and volunteers to serve their communities, develop leadership skills and help power every Starvira programme.
 problem: Young people are a powerful source of energy and ideas, but many lack structured opportunities to lead, serve and gain experience. Communities benefit when that energy is welcomed and well organised.
 beneficiaries:

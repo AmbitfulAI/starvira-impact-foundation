@@ -3,8 +3,8 @@ title: Introducing Starvira Impact Foundation
 date: 2026-11-20
 author: starvira-team
 category: foundation-news
-image: /images/illustrations/hero.svg
-imageAlt: Illustration of three figures beneath a path of light rising towards a gold star
+image: /images/art/hero.svg
+imageAlt: ""
 summary: Who we are, why we exist, and the four areas where we intend to help children, women and families across Ondo State build brighter futures.
 sample: true
 draft: false

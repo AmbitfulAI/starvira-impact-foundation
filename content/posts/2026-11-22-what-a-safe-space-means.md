@@ -3,8 +3,8 @@ title: What a safe space for girls and women really means
 date: 2026-11-22
 author: starvira-team
 category: women-and-youth
-image: /images/illustrations/safe-space.svg
-imageAlt: Illustration of two figures sheltered by an arch with a star above
+image: /images/art/equality.svg
+imageAlt: ""
 summary: Safety, confidence and community. How we think about creating spaces where girls and women can speak freely, learn and lead.
 sample: true
 draft: false

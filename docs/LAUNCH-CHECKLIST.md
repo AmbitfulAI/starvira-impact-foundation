@@ -2,7 +2,7 @@
 
 ## Information the Foundation must supply (placeholders)
 
-Bracketed placeholders are highlighted in yellow on the website and in the documents.
+On the website, bracketed placeholders are hidden until real details are entered (build with `SHOW_PLACEHOLDERS=1` to see them). In the documents they are highlighted in yellow.
 
 | Placeholder | Where to change it |
 | --- | --- |

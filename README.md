@@ -21,7 +21,7 @@ The official website of **Starvira Impact Foundation**, a community-led nonprofi
 
 The brief suggested Next.js. This site instead uses a **zero-dependency static build** (plain Node.js, no npm packages to install), plus two small serverless functions. The reasons:
 
-- **Fast on Nigerian mobile networks.** Every page is plain HTML with about 45 KB of CSS and JavaScript and self-hosted fonts. There is no framework to download.
+- **Fast on Nigerian mobile networks.** Every page is plain HTML with about 36 KB of CSS and JavaScript and self-hosted fonts. There is no framework to download.
 - **Low maintenance and low cost.** No dependencies means no security updates to chase and no broken builds when packages change. It hosts free on Vercel, Netlify or Cloudflare Pages.
 - **Non-technical publishing.** Decap CMS at `/admin` lets staff write stories, edit programmes and update contact, bank and impact details through a web form.
 
@@ -45,7 +45,7 @@ npm run build      # production build into dist/
 - Donation page with copy-to-clipboard bank details, a ready slot for a Paystack or Flutterwave payment page link, donor privacy and receipt process
 - SEO: unique titles and descriptions, canonical links, Open Graph images, sitemap, robots.txt, RSS, schema.org NGO, Person and Article data
 - Accessibility: skip link, landmarks, labelled fields, visible focus, reduced-motion support, tested colour contrast
-- Placeholders such as `[Account Number]` are highlighted on the page until real information replaces them
+- Missing details such as `[Account Number]` are hidden on the public site until real information is added. Build with `SHOW_PLACEHOLDERS=1` to see them highlighted while filling things in
 
 ## Guides
 

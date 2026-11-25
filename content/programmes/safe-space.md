@@ -5,8 +5,8 @@ order: 5
 pillar: equality
 status: Planned
 sdgs: [5]
-image: /images/illustrations/safe-space.svg
-imageAlt: Illustration of two figures inside a protective arch with a small star above
+image: /images/art/equality.svg
+imageAlt: ""
 summary: Safe, supervised spaces where girls and women build confidence, leadership skills and knowledge of their rights, with clear pathways to qualified support.
 problem: Girls and young women often have few places where they can speak freely, learn about their rights and build confidence. When concerns about safety or wellbeing arise, many do not know where to turn.
 beneficiaries:

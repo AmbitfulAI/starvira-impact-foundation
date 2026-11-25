@@ -22,7 +22,7 @@ You do not need to know how to code. Sign in at `/admin` (see CMS-SETUP.md).
 
 **Site settings > Contact, bank, social and impact figures.**
 
-- Replace every value in square brackets, such as `[Account Number]`. Bracketed values are highlighted on the website so none are missed.
+- Replace every value in square brackets, such as `[Account Number]`. Bracketed values are hidden on the public website, so the related line or section only appears once real information is entered.
 - **Social media:** paste a profile link only when the account is active. Empty links show as "coming soon".
 - **Online giving:** paste a Paystack or Flutterwave payment page link to switch on the "Give securely online" button.
 - **Impact figures:** enter a value only when it has been verified under the MEL framework. Empty values show "Data pending".

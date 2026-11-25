@@ -5,8 +5,8 @@ order: 4
 pillar: livelihoods
 status: Planned
 sdgs: [1, 4]
-image: /images/illustrations/skills-livelihood.svg
-imageAlt: Illustration of two gears and a work bag beside a standing figure
+image: /images/art/stories.svg
+imageAlt: ""
 summary: Vocational and digital skills training that equips young people and adults with practical abilities for employment and self-employment.
 problem: Many capable young people and adults lack access to the practical training that would open doors to employment or a viable trade. Without these skills, talent goes unused and poverty is harder to escape.
 beneficiaries:

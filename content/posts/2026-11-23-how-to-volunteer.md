@@ -3,8 +3,8 @@ title: Five ways to volunteer with Starvira
 date: 2026-11-23
 author: starvira-team
 category: volunteer-stories
-image: /images/illustrations/volunteer-youth.svg
-imageAlt: Illustration of three figures with raised arms beneath a heart
+image: /images/art/youth.svg
+imageAlt: ""
 summary: From packing school bags to mentoring a young entrepreneur, there is a place for your time and skills.
 sample: true
 draft: false

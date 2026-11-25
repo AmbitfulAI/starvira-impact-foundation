@@ -5,8 +5,8 @@ order: 3
 pillar: livelihoods
 status: Planned
 sdgs: [1, 5]
-image: /images/illustrations/women-rise.svg
-imageAlt: Illustration of a woman with raised arms on a hill, with a path of light rising towards a star
+image: /images/art/livelihoods.svg
+imageAlt: ""
 summary: Economic empowerment for women through business skills, financial literacy, peer support and pathways to sustainable income.
 problem: Women in many communities carry significant responsibility for their households, yet often have fewer opportunities to build skills, access finance or grow a business. When women earn and manage income with confidence, the benefits reach children and whole families.
 beneficiaries:

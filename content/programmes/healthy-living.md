@@ -5,8 +5,8 @@ order: 2
 pillar: health
 status: Planned
 sdgs: [3]
-image: /images/illustrations/healthy-living.svg
-imageAlt: Illustration of a water drop holding a heart, framed by green leaves
+image: /images/art/health.svg
+imageAlt: ""
 summary: Community health education on nutrition, hygiene, prevention and emotional wellbeing, delivered with qualified partners and linked to trusted local health services.
 problem: Many health problems can be prevented or managed early when families have clear information and know where to turn. Yet reliable health information does not always reach the people who need it most, and mental and emotional wellbeing is often left unspoken.
 beneficiaries:

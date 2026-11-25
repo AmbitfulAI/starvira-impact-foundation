@@ -5,8 +5,8 @@ order: 6
 pillar: livelihoods
 status: Planned
 sdgs: [1, 3, 4, 5]
-image: /images/illustrations/community-empowerment.svg
-imageAlt: Illustration of six community members standing together beneath a dotted arc
+image: /images/art/community.svg
+imageAlt: ""
 summary: Community-led initiatives where residents identify priorities and work with the Foundation and partners to address them together.
 problem: Lasting change depends on community ownership. Projects designed far away often miss what matters most to residents, and support that ends abruptly can leave little behind.
 beneficiaries:

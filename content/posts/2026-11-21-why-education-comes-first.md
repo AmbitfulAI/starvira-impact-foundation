@@ -3,8 +3,8 @@ title: Why the start of the school term matters so much
 date: 2026-11-21
 author: starvira-team
 category: education
-image: /images/illustrations/pillar-education.svg
-imageAlt: Illustration of an open book with a path of light rising to a star
+image: /images/art/education.svg
+imageAlt: ""
 summary: A missed first week can become a missed term. Here is why our education work focuses on that first, decisive moment.
 sample: true
 draft: false
