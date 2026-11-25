@@ -2,9 +2,9 @@
 # Editors sign in with GitHub at /admin. Every save becomes a commit, and the site rebuilds automatically.
 backend:
   name: github
-  repo: YOUR-GITHUB-USERNAME/starvira-impact-foundation   # <-- change to the real repository
+  repo: AmbitfulAI/starvira-impact-foundation
   branch: main
-  base_url: https://YOUR-SITE-DOMAIN                        # <-- the live site address, used for sign-in
+  base_url: https://starvira-impact-foundation.vercel.app   # change when a custom domain is added
   auth_endpoint: api/auth
   commit_messages:
     create: 'Add {{collection}} "{{slug}}"'
@@ -18,8 +18,8 @@ publish_mode: editorial_workflow
 
 media_folder: public/images/uploads
 public_folder: /images/uploads
-site_url: https://YOUR-SITE-DOMAIN
-display_url: https://YOUR-SITE-DOMAIN
+site_url: https://starvira-impact-foundation.vercel.app
+display_url: https://starvira-impact-foundation.vercel.app
 locale: en
 
 collections:
