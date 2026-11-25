@@ -1,0 +1,16 @@
+{
+  "name": "starvira-impact-foundation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website for Starvira Impact Foundation, Ondo State, Nigeria",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "node build.mjs",
+    "build:preview": "PREVIEW_DRAFTS=1 node build.mjs",
+    "dev": "node build.mjs && MAIL_MODE=log node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs",
+    "test": "node build.mjs && node --test tests/*.test.mjs"
+  },
+  "license": "UNLICENSED"
+}

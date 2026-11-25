@@ -1,0 +1,18 @@
+# Rebuilds the live site once a day so that scheduled (future-dated) stories are published automatically.
+# Setup: in Vercel, create a Deploy Hook (Project Settings > Git > Deploy Hooks),
+# then add it to GitHub as a repository secret named VERCEL_DEPLOY_HOOK_URL.
+name: Daily rebuild for scheduled posts
+on:
+  schedule:
+    - cron: '17 5 * * *'   # 05:17 UTC, 06:17 in Nigeria
+  workflow_dispatch: {}
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel deploy hook
+        env:
+          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$HOOK" ]; then echo "VERCEL_DEPLOY_HOOK_URL secret not set; skipping."; exit 0; fi
+          curl -fsS -X POST "$HOOK"

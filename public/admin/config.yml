@@ -1,0 +1,214 @@
+# Decap CMS configuration for Starvira Impact Foundation.
+# Editors sign in with GitHub at /admin. Every save becomes a commit, and the site rebuilds automatically.
+backend:
+  name: github
+  repo: YOUR-GITHUB-USERNAME/starvira-impact-foundation   # <-- change to the real repository
+  branch: main
+  base_url: https://YOUR-SITE-DOMAIN                        # <-- the live site address, used for sign-in
+  auth_endpoint: api/auth
+  commit_messages:
+    create: 'Add {{collection}} "{{slug}}"'
+    update: 'Update {{collection}} "{{slug}}"'
+    delete: 'Delete {{collection}} "{{slug}}"'
+    uploadMedia: 'Upload "{{path}}"'
+    deleteMedia: 'Delete "{{path}}"'
+
+# Draft, In review and Ready workflow before anything goes live
+publish_mode: editorial_workflow
+
+media_folder: public/images/uploads
+public_folder: /images/uploads
+site_url: https://YOUR-SITE-DOMAIN
+display_url: https://YOUR-SITE-DOMAIN
+locale: en
+
+collections:
+  - name: posts
+    label: Stories and blog
+    label_singular: Story
+    description: News, community stories and insights. Set a future date to schedule, or tick Draft to hide a post.
+    folder: content/posts
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    preview_path: 'stories/{{slug}}/'
+    sortable_fields: [date, title, category]
+    summary: '{{title}} ({{date}})'
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Publication date, name: date, widget: datetime, date_format: 'YYYY-MM-DD', time_format: false, format: 'YYYY-MM-DD', hint: 'A future date schedules the post. It appears after the next daily rebuild.' }
+      - { label: Author, name: author, widget: relation, collection: settings, file: authors, search_fields: ['authors.*.name'], display_fields: ['authors.*.name'], value_field: 'authors.*.slug' }
+      - { label: Category, name: category, widget: relation, collection: settings, file: categories, search_fields: ['categories.*.name'], display_fields: ['categories.*.name'], value_field: 'categories.*.slug' }
+      - { label: Featured image, name: image, widget: image, required: false, hint: 'Landscape, at least 1600 pixels wide. Only use photos with written consent.' }
+      - { label: Image description (alt text), name: imageAlt, widget: string, required: false, hint: 'Describe the image for people using screen readers.' }
+      - { label: Summary, name: summary, widget: text, hint: 'One or two sentences shown on story cards and in search results.' }
+      - { label: Related programmes, name: programmes, widget: relation, collection: programmes, search_fields: [title], value_field: slug, display_fields: [title], multiple: true, required: false }
+      - { label: Image gallery, name: gallery, widget: list, required: false, field: { label: Image, name: image, widget: image } }
+      - { label: Draft (hide from website), name: draft, widget: boolean, default: false, required: false }
+      - { label: Sample article, name: sample, widget: boolean, default: false, required: false, hint: 'Shows a "sample" label. Untick for real articles.' }
+      - { label: SEO title, name: seoTitle, widget: string, required: false }
+      - { label: SEO description, name: seoDescription, widget: text, required: false }
+      - { label: Body, name: body, widget: markdown }
+
+  - name: programmes
+    label: Programmes
+    label_singular: Programme
+    folder: content/programmes
+    create: true
+    slug: '{{fields.slug}}'
+    preview_path: 'programmes/{{slug}}/'
+    summary: '{{title}} ({{status}})'
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: URL slug, name: slug, widget: string, pattern: ['^[a-z0-9-]+$', 'Lowercase letters, numbers and hyphens only'] }
+      - { label: Display order, name: order, widget: number, value_type: int, default: 10 }
+      - { label: Pillar, name: pillar, widget: select, options: [{ label: Education and Youth Development, value: education }, { label: Health and Well-being, value: health }, { label: Economic Empowerment and Livelihoods, value: livelihoods }, { label: 'Equality, Protection and Community Inclusion', value: equality }] }
+      - { label: Status, name: status, widget: select, options: [Planned, Pilot, Active, Paused, Completed], default: Planned }
+      - { label: SDGs, name: sdgs, widget: select, multiple: true, options: [{ label: 'SDG 1: No Poverty', value: '1' }, { label: 'SDG 3: Good Health', value: '3' }, { label: 'SDG 4: Quality Education', value: '4' }, { label: 'SDG 5: Gender Equality', value: '5' }] }
+      - { label: Image, name: image, widget: image }
+      - { label: Image description (alt text), name: imageAlt, widget: string }
+      - { label: Summary, name: summary, widget: text }
+      - { label: The challenge, name: problem, widget: text }
+      - { label: Who it serves, name: beneficiaries, widget: list }
+      - { label: Planned activities, name: activities, widget: list }
+      - { label: Expected outcomes, name: outcomes, widget: list }
+      - label: Indicators
+        name: indicators
+        widget: list
+        fields:
+          - { label: Indicator, name: indicator, widget: string }
+          - { label: How it is measured, name: measure, widget: string }
+      - { label: Potential partners, name: partners, widget: list }
+      - { label: Volunteer roles, name: volunteerRoles, widget: list }
+      - { label: Body, name: body, widget: markdown }
+
+  - name: settings
+    label: Site settings
+    editor: { preview: false }
+    files:
+      - name: general
+        label: Contact, bank, social and impact figures
+        file: content/site.json
+        fields:
+          - { label: Foundation name, name: name, widget: string }
+          - { label: Short name, name: shortName, widget: string }
+          - { label: Abbreviation, name: abbreviation, widget: string }
+          - { label: Slogan, name: slogan, widget: string }
+          - { label: Positioning line, name: positioning, widget: string }
+          - { label: Site description (for search engines), name: description, widget: text }
+          - { label: Live website address, name: url, widget: string, required: false, hint: 'For example https://www.starvira.org (no trailing slash)' }
+          - { label: Locale, name: locale, widget: hidden, default: en_NG }
+          - label: Registration
+            name: registration
+            widget: object
+            fields:
+              - { label: Status, name: status, widget: string }
+              - { label: Number, name: number, widget: string }
+          - label: Contact
+            name: contact
+            widget: object
+            fields:
+              - { label: General email, name: email, widget: string }
+              - { label: Donations email, name: donationsEmail, widget: string }
+              - { label: Telephone, name: phone, widget: string }
+              - { label: WhatsApp link, name: whatsapp, widget: string, required: false }
+              - { label: Office hours, name: officeHours, widget: string }
+              - label: Offices
+                name: offices
+                widget: list
+                fields:
+                  - { label: Name, name: name, widget: string }
+                  - { label: Address, name: address, widget: string }
+                  - { label: Map link, name: mapUrl, widget: string, required: false }
+          - label: Founder
+            name: founder
+            widget: object
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Role, name: role, widget: string }
+              - { label: LinkedIn URL, name: linkedin, widget: string, required: false }
+              - { label: Photo credit, name: photoCredit, widget: string }
+          - label: Bank details
+            name: bank
+            widget: object
+            fields:
+              - { label: Bank name, name: bankName, widget: string }
+              - { label: Account name, name: accountName, widget: string }
+              - { label: Account number, name: accountNumber, widget: string }
+              - { label: Currency, name: currency, widget: string }
+              - { label: Swift code, name: swift, widget: string }
+          - label: Online giving
+            name: donations
+            widget: object
+            fields:
+              - { label: One-time giving link (Paystack or Flutterwave payment page), name: onlineGivingUrl, widget: string, required: false }
+              - { label: Provider name, name: onlineGivingProvider, widget: string }
+              - { label: Monthly giving link, name: recurringGivingUrl, widget: string, required: false }
+          - label: Social media
+            name: social
+            widget: list
+            allow_add: false
+            fields:
+              - { label: Network, name: name, widget: string }
+              - { label: Profile URL (leave empty until the account is active), name: url, widget: string, required: false }
+          - label: Forms
+            name: forms
+            widget: object
+            fields:
+              - { label: Endpoint, name: endpoint, widget: string, default: /api/submit }
+              - { label: Cloudflare Turnstile site key (optional), name: turnstileSiteKey, widget: string, required: false }
+          - label: Analytics
+            name: analytics
+            widget: object
+            fields:
+              - { label: Plausible domain (optional, cookie-free), name: plausibleDomain, widget: string, required: false }
+          - label: Impact figures
+            name: impact
+            widget: list
+            hint: Only enter verified figures. Leave the value empty to show "Data pending".
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Verified value, name: value, widget: string, required: false }
+              - { label: Note, name: note, widget: string }
+          - label: Reports
+            name: reports
+            widget: list
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Year, name: year, widget: string }
+              - { label: PDF file, name: file, widget: file }
+      - name: founder
+        label: Founder page
+        file: content/pages/founder.md
+        fields:
+          - { label: Name, name: name, widget: string }
+          - { label: Role, name: role, widget: string }
+          - { label: Introduction, name: intro, widget: text }
+          - { label: Biography, name: biography, widget: text }
+          - { label: Founder's story, name: story, widget: text }
+          - { label: Commitments, name: commitments, widget: list }
+          - { label: LinkedIn URL, name: linkedin, widget: string, required: false }
+          - { label: Signature name, name: signature, widget: string }
+          - { label: Message status, name: messageStatus, widget: select, options: [draft, approved] }
+          - { label: Founder's message, name: body, widget: markdown }
+      - name: authors
+        label: Authors
+        file: content/authors.json
+        fields:
+          - label: Authors
+            name: authors
+            widget: list
+            fields:
+              - { label: Slug, name: slug, widget: string }
+              - { label: Name, name: name, widget: string }
+              - { label: Role, name: role, widget: string }
+      - name: categories
+        label: Story categories
+        file: content/categories.json
+        fields:
+          - label: Categories
+            name: categories
+            widget: list
+            fields:
+              - { label: Slug, name: slug, widget: string }
+              - { label: Name, name: name, widget: string }

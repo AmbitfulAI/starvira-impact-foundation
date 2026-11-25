@@ -1,0 +1,68 @@
+{
+  "name": "Starvira Impact Foundation",
+  "shortName": "Starvira",
+  "abbreviation": "SIF",
+  "slogan": "Lighting Paths. Lifting Lives. Creating Impact.",
+  "positioning": "A community-led foundation creating pathways to dignity, opportunity and lasting change.",
+  "description": "Starvira Impact Foundation is a community-led nonprofit in Ondo State, Nigeria, expanding access to education, health, equality and economic opportunity for children, young people, women and families.",
+  "url": "",
+  "locale": "en_NG",
+  "registration": {
+    "status": "[Registration status, for example: Incorporated Trustees registered with the Corporate Affairs Commission]",
+    "number": "[CAC registration number]"
+  },
+  "contact": {
+    "email": "[info@yourdomain.org]",
+    "donationsEmail": "[giving@yourdomain.org]",
+    "phone": "[+234 000 000 0000]",
+    "whatsapp": "",
+    "officeHours": "[Monday to Friday, 9:00 to 17:00 WAT]",
+    "offices": [
+      { "name": "Akure office", "address": "[Street address], Akure, Ondo State, Nigeria", "mapUrl": "" },
+      { "name": "Akungba Akoko office", "address": "[Street address], Akungba Akoko, Ondo State, Nigeria", "mapUrl": "" }
+    ]
+  },
+  "founder": {
+    "name": "Jumoke O. Kolade",
+    "role": "Founder and Chief Executive Officer",
+    "linkedin": "",
+    "photoCredit": "Studio portrait by JayFlash Studios"
+  },
+  "bank": {
+    "bankName": "[Bank Name]",
+    "accountName": "[Registered Foundation Account Name]",
+    "accountNumber": "[Account Number]",
+    "currency": "NGN",
+    "swift": "[Swift Code, where applicable]"
+  },
+  "donations": {
+    "onlineGivingUrl": "",
+    "onlineGivingProvider": "Paystack",
+    "recurringGivingUrl": ""
+  },
+  "social": [
+    { "name": "Instagram", "url": "" },
+    { "name": "Facebook", "url": "" },
+    { "name": "LinkedIn", "url": "" },
+    { "name": "X", "url": "" },
+    { "name": "TikTok", "url": "" },
+    { "name": "YouTube", "url": "" },
+    { "name": "WhatsApp", "url": "" }
+  ],
+  "forms": {
+    "endpoint": "/api/submit",
+    "turnstileSiteKey": ""
+  },
+  "analytics": {
+    "plausibleDomain": ""
+  },
+  "impact": [
+    { "label": "Children supported with education", "value": "", "note": "Pupils receiving school materials, tutoring or mentorship" },
+    { "label": "Families reached", "value": "", "note": "Households supported across all programmes" },
+    { "label": "Volunteers engaged", "value": "", "note": "Active volunteers contributing time and skills" },
+    { "label": "Training sessions delivered", "value": "", "note": "Skills, financial literacy and health education sessions" },
+    { "label": "Women in economic empowerment", "value": "", "note": "Participants in Women Rise and livelihood training" },
+    { "label": "Community partnerships", "value": "", "note": "Formal partnerships with schools, businesses and institutions" }
+  ],
+  "reports": []
+}

@@ -1,0 +1,13 @@
+{
+  "categories": [
+    { "slug": "foundation-news", "name": "Foundation News" },
+    { "slug": "community-impact", "name": "Community Impact" },
+    { "slug": "education", "name": "Education" },
+    { "slug": "health-and-wellbeing", "name": "Health and Well-being" },
+    { "slug": "women-and-youth", "name": "Women and Youth" },
+    { "slug": "events-and-outreach", "name": "Events and Outreach" },
+    { "slug": "volunteer-stories", "name": "Volunteer Stories" },
+    { "slug": "partnerships", "name": "Partnerships" },
+    { "slug": "insights-and-perspectives", "name": "Insights and Perspectives" }
+  ]
+}
